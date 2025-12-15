@@ -26,7 +26,7 @@ export default function Hero() {
               View Projects <FaArrowRight />
             </a>
             <a
-              href="/Piyush_Kedia_Resume.pdf"
+              href="/PIYUSH_KUMAR_KEDIA_CV.pdf"
               download
               className="px-6 py-3 rounded-md border border-amber-400 text-amber-400 font-medium hover:bg-amber-400 hover:text-gray-900 hover:scale-105 transition-all flex items-center gap-2"
             >
