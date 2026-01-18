@@ -5,7 +5,7 @@ Welcome to my **personal portfolio website**! This is a responsive, modern, and 
 ---
 
 ## 🌐 Live Demo
-[View Live Website](https://portfolio-website2-seven.vercel.app/)
+[View Live Website](https://piyushkumarkedia.vercel.app/)
 
 ---
 
@@ -51,4 +51,4 @@ npm run dev
 ```
 
 Open http://localhost:5173
- to see your portfolio.
+ to see portfolio.
