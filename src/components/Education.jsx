@@ -12,11 +12,11 @@ export default function Education() {
           {/* B.Tech */}
           <div className="border border-gray-700 rounded-md p-5 bg-gray-800 hover:bg-gray-700 transition-colors">
             <div className="font-semibold text-amber-400">
-              B.Tech — Chemical Science and Technology (Minor in Mathematics)
+              B.Tech — Chemical Science and Technology
             </div>
             <div className="text-gray-300 text-sm md:text-base">
               Indian Institute of Technology, Guwahati • 2024 - Present • CGPA:
-              7.35 (current)
+              7.67 (current)
             </div>
           </div>
 

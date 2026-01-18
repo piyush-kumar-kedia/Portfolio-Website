@@ -25,7 +25,7 @@ export default function About() {
             <span className="text-amber-400 font-semibold">
               Chemical Science and Technology
             </span>{" "}
-            with a Minor in Mathematics.
+            
           </p>
 
           <p>
