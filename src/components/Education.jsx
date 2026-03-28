@@ -1,44 +1,49 @@
 import React from "react";
-import AnimatedSection from "./AnimatedSection";
+import AnimatedSection, { Stagger, StaggerItem } from "./AnimatedSection";
+
+const rows = [
+  {
+    title: "B.Tech — Chemical Science and Technology",
+    detail:
+      "Indian Institute of Technology, Guwahati • 2024 – Present • CGPA: 7.67 (current)",
+  },
+  {
+    title: "Senior Secondary (CBSE)",
+    detail: "94.8% • 2024",
+  },
+  {
+    title: "Secondary (CBSE)",
+    detail: "96.4% • 2022",
+  },
+];
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 bg-gray-900 text-gray-200">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-amber-400 text-center">
-          Education
-        </h2>
-        <div className="space-y-6">
-          {/* B.Tech */}
-          <div className="border border-gray-700 rounded-md p-5 bg-gray-800 hover:bg-gray-700 transition-colors">
-            <div className="font-semibold text-amber-400">
-              B.Tech — Chemical Science and Technology
-            </div>
-            <div className="text-gray-300 text-sm md:text-base">
-              Indian Institute of Technology, Guwahati • 2024 - Present • CGPA:
-              7.67 (current)
-            </div>
-          </div>
-
-          {/* Senior Secondary */}
-          <div className="border border-gray-700 rounded-md p-5 bg-gray-800 hover:bg-gray-700 transition-colors">
-            <div className="font-semibold text-amber-400">
-              Senior Secondary (CBSE)
-            </div>
-            <div className="text-gray-300 text-sm md:text-base">
-              94.8% • 2024
-            </div>
-          </div>
-
-          {/* Secondary / 10th */}
-          <div className="border border-gray-700 rounded-md p-5 bg-gray-800 hover:bg-gray-700 transition-colors">
-            <div className="font-semibold text-amber-400">Secondary (CBSE)</div>
-            <div className="text-gray-300 text-sm md:text-base">
-              96.4% • 2022
-            </div>
-          </div>
-        </div>
+    <AnimatedSection
+      id="education"
+      className="border-b border-zinc-200/80 bg-gradient-to-b from-zinc-50/80 to-zinc-100/40 py-14 sm:py-20 md:py-24"
+    >
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 lg:px-8">
+        <Stagger className="mx-auto flex max-w-3xl flex-col gap-4 sm:gap-5">
+          <StaggerItem>
+            <h2 className="text-center text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl md:text-4xl">
+              Education
+            </h2>
+          </StaggerItem>
+          {rows.map((row) => (
+            <StaggerItem key={row.title}>
+              <div className="rounded-2xl border border-zinc-200/90 bg-white/85 px-4 py-4 shadow-[0_1px_0_rgba(0,0,0,0.04),0_6px_20px_rgba(0,0,0,0.04)] transition hover:border-zinc-300/90 sm:px-6 sm:py-5">
+                <div className="text-[15px] font-semibold text-zinc-900 sm:text-base">
+                  {row.title}
+                </div>
+                <div className="mt-1 text-sm text-zinc-600 sm:text-base">
+                  {row.detail}
+                </div>
+              </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

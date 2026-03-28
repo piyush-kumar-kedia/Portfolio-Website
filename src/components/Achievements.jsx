@@ -1,25 +1,46 @@
 import React from "react";
-import AnimatedSection from "./AnimatedSection";
+import AnimatedSection, { Stagger, StaggerItem } from "./AnimatedSection";
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-20 bg-gray-900 text-gray-200">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-amber-400">
-          Achievements
-        </h2>
-        <ul className="list-disc pl-5 space-y-3 text-gray-300 text-lg md:text-xl">
-          <li>
-            Qualified{" "}
-            <span className="text-amber-400 font-semibold">JEE Advanced</span> —
-            AIR 5850 (Top 0.5%)
-          </li>
-          <li>
-            <span className="text-amber-400 font-semibold">JEE Mains</span> —
-            99.63%ile (100% in Physics)
-          </li>
-        </ul>
+    <AnimatedSection
+      id="achievements"
+      className="border-b border-zinc-200/80 bg-white/45 py-14 backdrop-blur-[2px] sm:py-20 md:py-24"
+    >
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 lg:px-8">
+        <Stagger className="flex flex-col gap-6 sm:gap-8">
+          <StaggerItem>
+            <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl md:text-4xl">
+              Achievements
+            </h2>
+          </StaggerItem>
+          <StaggerItem>
+            <ul className="max-w-3xl space-y-4 text-[15px] text-zinc-600 sm:text-base md:text-lg">
+              <li className="flex gap-3">
+                <span
+                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-400 shadow-sm"
+                  aria-hidden
+                />
+                <span>
+                  Qualified{" "}
+                  <span className="font-medium text-zinc-900">JEE Advanced</span>{" "}
+                  — AIR 5850 (top 0.5%)
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span
+                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-400 shadow-sm"
+                  aria-hidden
+                />
+                <span>
+                  <span className="font-medium text-zinc-900">JEE Mains</span> —
+                  99.63 percentile (100% in Physics)
+                </span>
+              </li>
+            </ul>
+          </StaggerItem>
+        </Stagger>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

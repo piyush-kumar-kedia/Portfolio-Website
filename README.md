@@ -16,9 +16,9 @@ Welcome to my **personal portfolio website**! This is a responsive, modern, and 
 - **Projects Showcase**: Highlights my major projects with detailed descriptions and links to GitHub and live demos.
 - **Skills Section**: Categorized skills with visually appealing badges.
 - **Education & Achievements**: Highlights academic milestones and notable achievements.
-- **Contact Section**: Professional contact links and optional contact form integration.
-- **Smooth Animations**: Page transitions, hover effects, and scroll-based animations for a modern user experience.
-- **Dark Mode / Professional Theme**: Dark-themed design for a professional and readable interface.
+- **Contact Section**: Email (`mailto:`) and social links with accessible external-link handling.
+- **Smooth Animations**: Hover effects and scroll-reveal sections (Framer Motion) for a modern feel.
+- **Professional Theme**: Dark-themed layout for readability and consistency.
 
 ---
 

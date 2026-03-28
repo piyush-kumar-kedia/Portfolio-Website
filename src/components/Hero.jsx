@@ -1,50 +1,67 @@
 import React from "react";
 import { FaDownload, FaArrowRight } from "react-icons/fa";
-import AnimatedSection from "./AnimatedSection";
+import AnimatedSection, { Stagger, StaggerItem } from "./AnimatedSection";
+
+const focusPrimary =
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-50";
 
 export default function Hero() {
   return (
-    <section id="home" className="py-28 bg-gray-900 text-gray-200">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
-        <div className="flex-1 text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Hi, I’m <br /><span className="text-amber-400">Piyush Kumar Kedia</span>
-          </h1>
-          <p className="text-gray-300 mb-6 text-lg">
-          <p className="text-gray-300 text-base sm:text-lg md:text-xl mb-6">
-  Full-stack developer skilled in <span className="font-semibold text-amber-400">React, Node.js, and modern web technologies</span>, building <span className="font-semibold text-amber-400">scalable, high-performance web applications</span> that deliver <span className="font-semibold text-amber-400">seamless user experiences</span> and <span className="font-semibold text-amber-400">production-ready solutions</span>.
-</p>
+    <AnimatedSection
+      id="home"
+      className="border-b border-zinc-200/80 bg-gradient-to-b from-white/90 via-zinc-50/80 to-zinc-100/90 pt-[calc(5.5rem+env(safe-area-inset-top))] pb-14 sm:pb-16 md:pt-32 md:pb-24"
+    >
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 lg:px-8">
+        <Stagger className="flex flex-col items-center gap-10 sm:gap-12 md:flex-row md:items-center md:gap-14 lg:gap-16">
+          <StaggerItem className="w-full flex-1 text-center md:text-left">
+            <h1 className="text-balance text-[1.65rem] font-semibold tracking-tight text-zinc-900 min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-[3.15rem] lg:leading-[1.12]">
+              Hi, I’m{" "}
+              <span className="bg-gradient-to-br from-zinc-800 to-zinc-600 bg-clip-text text-transparent">
+                Piyush Kumar Kedia
+              </span>
+            </h1>
+            <p className="mx-auto mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-zinc-600 sm:mt-5 sm:text-base md:mx-0 md:text-lg">
+              Full-stack developer focused on{" "}
+              <span className="font-medium text-zinc-800">React</span>,{" "}
+              <span className="font-medium text-zinc-800">Node.js</span>, and{" "}
+              <span className="font-medium text-zinc-800">modern web systems</span>
+              — building clear, reliable products from API to deployment.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:mt-8 md:justify-start">
+              <a
+                href="#projects"
+                className={`inline-flex min-h-[44px] min-w-[44px] items-center justify-center gap-2 rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_20px_rgba(0,0,0,0.12)] transition hover:bg-zinc-800 sm:px-6 ${focusPrimary}`}
+              >
+                View projects <FaArrowRight className="text-xs opacity-90" />
+              </a>
+              <a
+                href="/PIYUSH_KUMAR_KEDIA_CV.pdf"
+                download
+                className={`inline-flex min-h-[44px] min-w-[44px] items-center justify-center gap-2 rounded-full border border-zinc-300/90 bg-white/80 px-5 py-2.5 text-sm font-medium text-zinc-800 shadow-[0_1px_0_rgba(0,0,0,0.04)] backdrop-blur-sm transition hover:border-zinc-400 hover:bg-white sm:px-6 ${focusPrimary}`}
+              >
+                Resume <FaDownload className="text-xs opacity-80" />
+              </a>
+            </div>
+          </StaggerItem>
 
-
-
-          </p>
-          <div className="flex flex-wrap justify-center md:justify-start gap-4">
-            <a
-              href="#projects"
-              className="px-6 py-3 rounded-md bg-amber-400 text-gray-900 font-medium hover:bg-amber-500 hover:scale-105 transition-all flex items-center gap-2"
-            >
-              View Projects <FaArrowRight />
-            </a>
-            <a
-              href="/PIYUSH_KUMAR_KEDIA_CV.pdf"
-              download
-              className="px-6 py-3 rounded-md border border-amber-400 text-amber-400 font-medium hover:bg-amber-400 hover:text-gray-900 hover:scale-105 transition-all flex items-center gap-2"
-            >
-              Download Resume <FaDownload />
-            </a>
-          </div>
-        </div>
-
-        <div className="flex-1 flex justify-center md:justify-end">
-          <div className="w-56 md:w-64 aspect-square rounded-full overflow-hidden border-4 border-amber-400 shadow-xl">
-            <img
-              src="profile_pic.jpg"
-              alt="Piyush"
-              className="w-full h-full object-cover object-top"
-            />
-          </div>
-        </div>
+          <StaggerItem className="flex w-full shrink-0 justify-center md:w-auto md:justify-end">
+            <div className="relative w-full max-w-[200px] min-[400px]:max-w-[230px] sm:max-w-[260px] md:max-w-none">
+              <div
+                className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-zinc-200/80 via-zinc-100/40 to-transparent blur-xl sm:-inset-4"
+                aria-hidden
+              />
+              <div className="relative mx-auto w-44 overflow-hidden rounded-2xl shadow-[0_24px_48px_-12px_rgba(0,0,0,0.2),0_0_0_1px_rgba(0,0,0,0.06)] ring-1 ring-black/[0.04] min-[400px]:w-48 sm:w-52 sm:rounded-3xl md:mx-0 md:w-52">
+                <img
+                  src="profile_pic.jpg"
+                  alt="Piyush Kumar Kedia"
+                  className="aspect-[5/6] h-auto w-full object-cover object-top sm:aspect-[4/5] md:h-64 md:aspect-auto"
+                  fetchPriority="high"
+                />
+              </div>
+            </div>
+          </StaggerItem>
+        </Stagger>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
