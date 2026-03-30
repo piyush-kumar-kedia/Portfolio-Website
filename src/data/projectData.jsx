@@ -47,7 +47,7 @@ export const projects = [
         during the conclave.
       </>
     ),
-    tech: ["React", "Node.js"],
+    tech: ["Django", "HTML", "CSS", "Python Anywhere"],
     image: "ric.jpg",
     github: "https://github.com/oonkarrr/RIC-25",
     demo: "https://www.ric.iitg.ac.in/",

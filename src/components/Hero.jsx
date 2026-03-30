@@ -21,11 +21,9 @@ export default function Hero() {
               </span>
             </h1>
             <p className="mx-auto mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-zinc-600 sm:mt-5 sm:text-base md:mx-0 md:text-lg">
-              Full-stack developer focused on{" "}
-              <span className="font-medium text-zinc-800">React</span>,{" "}
-              <span className="font-medium text-zinc-800">Node.js</span>, and{" "}
-              <span className="font-medium text-zinc-800">modern web systems</span>
-              — building clear, reliable products from API to deployment.
+              I build fast, reliable web applications. As a full-stack developer specializing in the{" "}
+              <span className="font-medium text-zinc-800">MERN stack</span> and{" "}
+              <span className="font-medium text-zinc-800">AWS</span>, I handle everything from writing the backend logic to deploying the final product to the cloud.
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:mt-8 md:justify-start">
               <a

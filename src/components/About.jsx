@@ -27,29 +27,20 @@ export default function About() {
               </p>
 
               <p>
-                I care about{" "}
-                <span className={em}>software development</span>—especially{" "}
-                <span className={em}>scalable web applications</span> and systems
-                end-to-end, from APIs to deployment on AWS.
+                I care deeply about <span className={em}>software development</span>—especially building{" "}
+                <span className={em}>scalable web applications</span> and owning systems end-to-end, from crafting efficient APIs to managing production deployments on AWS.
               </p>
 
               <p>
-                I contribute through the{" "}
-                <span className={em}>Coding Club</span> and the{" "}
-                <span className={em}>
-                  Research & Industrial Conclave WebOps team
-                </span>{" "}
-                at IITG, on platforms used across campus.
+                Being a part of the <span className={em}>Coding Club IITG</span>, the{" "}
+                <span className={em}>Student Web Committee IITG</span>, and the{" "}
+                <span className={em}>Research and Industrial Conclave IITG</span>, I actively contribute to building high-impact websites that solve real problems for our campus community and see heavy daily use.
               </p>
 
               <p>
-                I’m deepening{" "}
-                <span className={em}>data structures & algorithms</span> and
-                full-stack practice toward a strong internship in my third year.
-              </p>
-
-              <p className="text-zinc-500">
-                Outside work: puzzles, new tools, and small workflow improvements.
+                My technical expertise is rooted in <span className={em}>Full Stack Development</span> using{" "}
+                <span className={em}>React, Tailwind CSS, Node.js,</span> and{" "}
+                <span className={em}>MongoDB</span>. I also bring strong hands-on experience with infrastructure and cloud hosting, deploying applications on <span className={em}>AWS EC2</span> using <span className={em}>Nginx, Route 53, Load Balancers,</span> and securing them with <span className={em}>Certbot (HTTPS)</span>.
               </p>
             </div>
           </StaggerItem>
