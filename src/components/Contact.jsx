@@ -1,76 +1,94 @@
 import React from "react";
-import AnimatedSection, { Stagger, StaggerItem } from "./AnimatedSection";
+import {
+  Mail,
+  GraduationCap,
+  Github,
+  Linkedin,
+} from "lucide-react";
 
-const linkClass =
-  "break-all font-medium text-zinc-800 underline decoration-zinc-300 underline-offset-[3px] transition hover:text-zinc-950 hover:decoration-zinc-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-50 rounded-sm";
+import AnimatedSection, {
+  Stagger,
+  StaggerItem,
+} from "./AnimatedSection";
+
+const contacts = [
+  {
+    icon: Mail,
+    label: "Personal",
+    href: "mailto:piyushkumarkedia02221@gmail.com",
+    text: "piyushkumarkedia02221@gmail.com",
+  },
+  {
+    icon: GraduationCap,
+    label: "College",
+    href: "mailto:piyush.kedia@iitg.ac.in",
+    text: "piyush.kedia@iitg.ac.in",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/piyush-kumar-kedia",
+    text: "linkedin.com/in/piyush-kumar-kedia",
+  },
+  {
+    icon: Github,
+    label: "GitHub",
+    href: "https://github.com/piyush-kumar-kedia",
+    text: "github.com/piyush-kumar-kedia",
+  },
+];
 
 export default function Contact() {
-  const rows = [
-    {
-      label: "Personal",
-      href: "mailto:piyushkumarkedia02221@gmail.com",
-      text: "piyushkumarkedia02221@gmail.com",
-      external: false,
-    },
-    {
-      label: "College",
-      href: "mailto:piyush.kedia@iitg.ac.in",
-      text: "piyush.kedia@iitg.ac.in",
-      external: false,
-    },
-    {
-      label: "LinkedIn",
-      href: "https://linkedin.com/in/piyush-kumar-kedia",
-      text: "piyush-kumar-kedia",
-      external: true,
-    },
-    {
-      label: "GitHub",
-      href: "https://github.com/piyush-kumar-kedia",
-      text: "piyush-kumar-kedia",
-      external: true,
-    },
-  ];
-
   return (
     <AnimatedSection
       id="contact"
-      className="bg-gradient-to-b from-zinc-100/60 to-zinc-200/40 py-14 sm:py-20 md:py-28"
+      className="bg-gradient-to-b from-zinc-100/60 to-zinc-200/40 py-16 sm:py-24"
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-5 lg:px-8">
-        <Stagger className="flex flex-col gap-6 sm:gap-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <Stagger className="flex flex-col gap-10">
           <StaggerItem>
-            <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl md:text-4xl">
-              Contact
-            </h2>
-          </StaggerItem>
-          <StaggerItem>
-            <div className="max-w-xl rounded-2xl border border-zinc-200/90 bg-white/90 p-5 shadow-[0_1px_0_rgba(0,0,0,0.04),0_16px_40px_rgba(0,0,0,0.08)] backdrop-blur-sm sm:p-6 md:p-8">
-              <dl className="space-y-4 sm:space-y-5">
-                {rows.map((row) => (
-                  <div
-                    key={row.label}
-                    className="flex flex-col gap-0.5 border-b border-zinc-100 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline sm:gap-6 sm:pb-5"
-                  >
-                    <dt className="w-24 shrink-0 text-[11px] font-semibold uppercase tracking-wider text-zinc-500 sm:w-28 sm:text-xs">
-                      {row.label}
-                    </dt>
-                    <dd className="min-w-0 text-sm sm:text-base">
-                      <a
-                        href={row.href}
-                        className={linkClass}
-                        {...(row.external
-                          ? { target: "_blank", rel: "noopener noreferrer" }
-                          : {})}
-                      >
-                        {row.text}
-                      </a>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+            <div className="space-y-3">
+              <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl">
+                Contact
+              </h2>
+
+              <p className="max-w-2xl text-sm leading-relaxed text-zinc-600 sm:text-base">
+                Open to software engineering internships, collaboration
+                opportunities, and interesting technical discussions.
+              </p>
             </div>
           </StaggerItem>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {contacts.map((item, idx) => {
+              const Icon = item.icon;
+
+              return (
+                <StaggerItem key={idx}>
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-4 rounded-2xl border border-zinc-200/80 bg-white/80 p-5 shadow-sm backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-zinc-300 hover:shadow-md"
+                  >
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-zinc-100 text-zinc-700 transition group-hover:bg-zinc-900 group-hover:text-white">
+                      <Icon size={20} />
+                    </div>
+
+                    <div className="min-w-0">
+                      <p className="text-xs font-medium uppercase tracking-wider text-zinc-500">
+                        {item.label}
+                      </p>
+
+                      <p className="truncate text-sm font-medium text-zinc-900 sm:text-base">
+                        {item.text}
+                      </p>
+                    </div>
+                  </a>
+                </StaggerItem>
+              );
+            })}
+          </div>
         </Stagger>
       </div>
     </AnimatedSection>
