@@ -5,7 +5,7 @@ const rows = [
   {
     title: "B.Tech — Chemical Science and Technology",
     detail:
-      "Indian Institute of Technology, Guwahati • 2024 – Present • CGPA: 7.67 (current)",
+      "Indian Institute of Technology, Guwahati • 2024 – Present • CGPA: 8.07 (current)",
   },
   {
     title: "Senior Secondary (CBSE)",

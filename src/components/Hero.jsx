@@ -9,55 +9,81 @@ export default function Hero() {
   return (
     <AnimatedSection
       id="home"
-      className="border-b border-zinc-200/80 bg-gradient-to-b from-white/90 via-zinc-50/80 to-zinc-100/90 pt-[calc(5.5rem+env(safe-area-inset-top))] pb-14 sm:pb-16 md:pt-32 md:pb-24"
+      className="border-b border-zinc-200/80 bg-gradient-to-b from-white via-zinc-50/70 to-zinc-100/80 pt-[calc(5.5rem+env(safe-area-inset-top))] pb-16 sm:pb-20 md:pt-32 md:pb-28"
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-5 lg:px-8">
-        <Stagger className="flex flex-col items-center gap-10 sm:gap-12 md:flex-row md:items-center md:gap-14 lg:gap-16">
+      <div className="mx-auto max-w-5xl px-4 sm:px-5 lg:px-8">
+        <Stagger className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-12">
+          
+          {/* LEFT CONTENT */}
           <StaggerItem className="w-full flex-1 text-center md:text-left">
-            <h1 className="text-balance text-[1.65rem] font-semibold tracking-tight text-zinc-900 min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-[3.15rem] lg:leading-[1.12]">
+            
+            <h1 className="text-balance text-[2rem] font-semibold tracking-tight text-zinc-900 sm:text-5xl md:text-6xl lg:text-[4rem] lg:leading-[1.05]">
               Hi, I’m{" "}
-              <span className="bg-gradient-to-br from-zinc-800 to-zinc-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-500 bg-clip-text text-transparent">
                 Piyush Kumar Kedia
               </span>
             </h1>
-            <p className="mx-auto mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-zinc-600 sm:mt-5 sm:text-base md:mx-0 md:text-lg">
-              I build fast, reliable web applications. As a full-stack developer specializing in the{" "}
-              <span className="font-medium text-zinc-800">MERN stack</span> and{" "}
-              <span className="font-medium text-zinc-800">AWS</span>, I handle everything from writing the backend logic to deploying the final product to the cloud.
+
+            <p className="mx-auto mt-5 max-w-lg text-pretty text-[15px] leading-relaxed text-zinc-600 sm:text-base md:mx-0 md:text-lg">
+              I build scalable full-stack applications and deploy
+              production-grade systems using{" "}
+              <span className="font-medium text-zinc-800">
+                React.js
+              </span>
+              ,{" "}
+              <span className="font-medium text-zinc-800">
+                Node.js
+              </span>
+              , and{" "}
+              <span className="font-medium text-zinc-800">
+                AWS
+              </span>{" "}
+              — focusing on performance, reliability, and clean user
+              experiences.
             </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:mt-8 md:justify-start">
+
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-3 md:justify-start">
+              
               <a
                 href="#projects"
-                className={`inline-flex min-h-[44px] min-w-[44px] items-center justify-center gap-2 rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white shadow-[0_1px_2px_rgba(0,0,0,0.08),0_8px_20px_rgba(0,0,0,0.12)] transition hover:bg-zinc-800 sm:px-6 ${focusPrimary}`}
+                className={`inline-flex min-h-[46px] items-center justify-center gap-2 rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-[0_10px_30px_-10px_rgba(0,0,0,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-zinc-800 ${focusPrimary}`}
               >
-                View projects <FaArrowRight className="text-xs opacity-90" />
+                View Projects
+                <FaArrowRight className="text-xs opacity-90" />
               </a>
+
               <a
                 href="/PIYUSH_KUMAR_KEDIA_CV.pdf"
                 download
-                className={`inline-flex min-h-[44px] min-w-[44px] items-center justify-center gap-2 rounded-full border border-zinc-300/90 bg-white/80 px-5 py-2.5 text-sm font-medium text-zinc-800 shadow-[0_1px_0_rgba(0,0,0,0.04)] backdrop-blur-sm transition hover:border-zinc-400 hover:bg-white sm:px-6 ${focusPrimary}`}
+                className={`inline-flex min-h-[46px] items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white/90 px-6 py-3 text-sm font-medium text-zinc-800 shadow-sm backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-zinc-400 hover:bg-white ${focusPrimary}`}
               >
-                Resume <FaDownload className="text-xs opacity-80" />
+                Resume
+                <FaDownload className="text-xs opacity-80" />
               </a>
+
             </div>
           </StaggerItem>
 
+          {/* RIGHT IMAGE */}
           <StaggerItem className="flex w-full shrink-0 justify-center md:w-auto md:justify-end">
-            <div className="relative w-full max-w-[200px] min-[400px]:max-w-[230px] sm:max-w-[260px] md:max-w-none">
+            <div className="relative">
+              
+              {/* Glow */}
               <div
-                className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-zinc-200/80 via-zinc-100/40 to-transparent blur-xl sm:-inset-4"
+                className="absolute inset-0 scale-105 rounded-full bg-gradient-to-br from-zinc-200/70 to-zinc-100/30 blur-2xl"
                 aria-hidden
               />
-              <div className="relative mx-auto w-44 overflow-hidden rounded-2xl shadow-[0_24px_48px_-12px_rgba(0,0,0,0.2),0_0_0_1px_rgba(0,0,0,0.06)] ring-1 ring-black/[0.04] min-[400px]:w-48 sm:w-52 sm:rounded-3xl md:mx-0 md:w-52">
-                <img
-                  src="profile_pic.jpg"
-                  alt="Piyush Kumar Kedia"
-                  className="aspect-[5/6] h-auto w-full object-cover object-top sm:aspect-[4/5] md:h-64 md:aspect-auto"
-                  fetchPriority="high"
-                />
-              </div>
+
+              {/* Profile Image */}
+              <img
+                src="profile_pic2.png"
+                alt="Piyush Kumar Kedia"
+                className="relative h-60 w-60 rounded-full object-cover shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] ring-4 ring-white sm:h-72 sm:w-72 md:h-80 md:w-80"
+                fetchPriority="high"
+              />
             </div>
           </StaggerItem>
+
         </Stagger>
       </div>
     </AnimatedSection>
